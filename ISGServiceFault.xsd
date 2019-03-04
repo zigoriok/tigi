@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  $Header: ISGFaultXsdTemplate.xml 120.0.12010000.2 2015/10/28 10:23:22 ditiwari noship $ -->
+<!-- +======================================================================+ -->
+<!-- |    Copyright (c) 2005, 2015 Oracle and/or its affiliates.           | -->
+<!-- |                         All rights reserved.                         | -->
+<!-- |                           Version 12.0.0                             | -->
+<!-- +======================================================================+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/isg/servicefault" targetNamespace="http://xmlns.oracle.com/isg/servicefault" elementFormDefault="qualified">
+ <xsd:complexType name="ISGServiceFault">
+  <xsd:sequence>
+   <xsd:element name="Code" type="xsd:string"/>
+   <xsd:element name="Message" type="xsd:string"/>
+   <xsd:element name="Resolution" type="xsd:string"/>
+   <xsd:element name="ServiceDetail" type="ServiceDetail"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="ISGServiceFault" type="ISGServiceFault"/>
+ <xsd:complexType name="ServiceDetail">
+  <xsd:sequence>
+   <xsd:element name="ServiceName" type="xsd:string"/>
+   <xsd:element name="OperationName" type="xsd:string"/>
+   <xsd:element name="InstanceId" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>
