@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  $Header: RESTHeaderTemplate.xml 120.0.12010000.5 2015/10/28 11:12:04 ditiwari noship $ -->
+<!-- +======================================================================+ -->
+<!-- |    Copyright (c) 2005, 2015 Oracle and/or its affiliates.           | -->
+<!-- |                         All rights reserved.                         | -->
+<!-- |                           Version 12.0.0                             | -->
+<!-- +======================================================================+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/rest/header" xmlns:tns="http://xmlns.oracle.com/apps/fnd/rest/header">        
+  <xsd:element name="RESTHeader" type="tns:RESTHeader"/>  
+ <xsd:complexType name="RESTHeader">
+  <xsd:sequence>
+   <xsd:element name="Responsibility" minOccurs="0" type="string"/>
+   <xsd:element name="RespApplication" minOccurs="0" type="string"/>
+   <xsd:element name="SecurityGroup" minOccurs="0" type="string"/>
+   <xsd:element name="NLSLanguage" minOccurs="0" type="string"/>
+   <xsd:element name="Org_Id" minOccurs="0" type="string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>
