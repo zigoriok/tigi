@@ -1,0 +1,439 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="PROCESS_ORDER_Input">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RESTHeader">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Responsibility" type="xs:string"></xs:element>
+                            <xs:element name="RespApplication" type="xs:string"></xs:element>
+                            <xs:element name="SecurityGroup" type="xs:string"></xs:element>
+                            <xs:element name="NLSLanguage" type="xs:string"></xs:element>
+                            <xs:element name="Org_Id" type="xs:int"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="InputParameters">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="P_ORG_ID" type="xs:int"></xs:element>
+                            <xs:element name="P_OPERATING_UNIT">
+                                <xs:complexType>
+                                    <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="P_API_VERSION_NUMBER" type="xs:int"></xs:element>
+                            <xs:element name="P_INIT_MSG_LIST" type="xs:string"></xs:element>
+                            <xs:element name="P_RETURN_VALUES" type="xs:string"></xs:element>
+                            <xs:element name="P_ACTION_COMMIT" type="xs:string"></xs:element>
+                            <xs:element name="P_HEADER_REC">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="BOOKED_FLAG">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="CANCELLED_FLAG">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="CUST_PO_NUMBER"></xs:element>
+                                        <xs:element name="FREIGHT_CARRIER_CODE" type="xs:string"></xs:element>
+                                        <xs:element name="HEADER_ID">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="INVOICE_TO_ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="OPEN_FLAG">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ORDERED_DATE" type="xs:string"></xs:element>
+                                        <xs:element name="ORDER_SOURCE_ID" type="xs:int"></xs:element>
+                                        <xs:element name="ORDER_TYPE_ID" type="xs:int"></xs:element>
+                                        <xs:element name="ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="ORIG_SYS_DOCUMENT_REF" type="xs:string"></xs:element>
+                                        <xs:element name="PAYMENT_TERM_ID" type="xs:int"></xs:element>
+                                        <xs:element name="PRICE_LIST_ID" type="xs:int"></xs:element>
+                                        <xs:element name="PRICING_DATE" type="xs:string"></xs:element>
+                                        <xs:element name="REQUEST_DATE" type="xs:string"></xs:element>
+                                        <xs:element name="SALESREP_ID" type="xs:int"></xs:element>
+                                        <xs:element name="SALES_CHANNEL_CODE" type="xs:string"></xs:element>
+                                        <xs:element name="SHIPMENT_PRIORITY_CODE" type="xs:string"></xs:element>
+                                        <xs:element name="SHIPPING_METHOD_CODE" type="xs:string"></xs:element>
+                                        <xs:element name="SHIP_FROM_ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="SHIP_TO_ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="SOLD_FROM_ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="SOLD_TO_ORG_ID" type="xs:int"></xs:element>
+                                        <xs:element name="TAX_EXEMPT_FLAG" type="xs:string"></xs:element>
+                                        <xs:element name="TAX_EXEMPT_NUMBER">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="TAX_EXEMPT_REASON_CODE">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="TRANSACTIONAL_CURR_CODE" type="xs:string"></xs:element>
+                                        <xs:element name="VERSION_NUMBER">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="OPERATION" type="xs:string"></xs:element>
+                                        <xs:element name="FLOW_STATUS_CODE">
+                                            <xs:complexType>
+                                                <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="P_OLD_HEADER_REC"></xs:element>
+                            <xs:element name="P_HEADER_VAL_REC"></xs:element>
+                            <xs:element name="P_OLD_HEADER_VAL_REC"></xs:element>
+                            <xs:element name="P_HEADER_ADJ_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_ADJ_TBL"></xs:element>
+                            <xs:element name="P_HEADER_ADJ_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_ADJ_VAL_TBL"></xs:element>
+                            <xs:element name="P_HEADER_PRICE_ATT_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_PRICE_ATT_TBL"></xs:element>
+                            <xs:element name="P_HEADER_ADJ_ATT_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_ADJ_ATT_TBL"></xs:element>
+                            <xs:element name="P_HEADER_ADJ_ASSOC_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_ADJ_ASSOC_TBL"></xs:element>
+                            <xs:element name="P_HEADER_SCREDIT_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_SCREDIT_TBL"></xs:element>
+                            <xs:element name="P_HEADER_SCREDIT_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_SCREDIT_VAL_TBL"></xs:element>
+                            <xs:element name="P_HEADER_PAYMENT_TBL">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="P_HEADER_PAYMENT_TBL_ITEM">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ATTRIBUTE1" type="xs:int"></xs:element>
+                                                    <xs:element name="ATTRIBUTE2" type="xs:string"></xs:element>
+                                                    <xs:element name="ATTRIBUTE3" type="xs:string"></xs:element>
+                                                    <xs:element name="ATTRIBUTE4" type="xs:int"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_APPROVAL_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_APPROVAL_DATE" type="xs:string"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_EXPIRATION_DATE" type="xs:string"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_HOLDER_NAME" type="xs:string"></xs:element>
+                                                    <xs:element name="CREDIT_CARD_NUMBER" type="xs:int"></xs:element>
+                                                    <xs:element name="CONTEXT">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="HEADER_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LINE_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="PAYMENT_AMOUNT" type="xs:int"></xs:element>
+                                                    <xs:element name="PAYMENT_NUMBER" type="xs:int"></xs:element>
+                                                    <xs:element name="PAYMENT_PERCENTAGE" type="xs:int"></xs:element>
+                                                    <xs:element name="PAYMENT_COLLECTION_EVENT" type="xs:string"></xs:element>
+                                                    <xs:element name="PAYMENT_LEVEL_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="PAYMENT_TYPE_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="RECEIPT_METHOD_ID"></xs:element>
+                                                    <xs:element name="STATUS_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="RETURN_STATUS">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="DB_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="OPERATION" type="xs:string"></xs:element>
+                                                    <xs:element name="DEFER_PAYMENT_PROCESSING_FLAG" type="xs:string"></xs:element>
+                                                    <xs:element name="LOCK_CONTROL">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="P_OLD_HEADER_PAYMENT_TBL"></xs:element>
+                            <xs:element name="P_HEADER_PAYMENT_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_HEADER_PAYMENT_VAL_TBL"></xs:element>
+                            <xs:element name="P_LINE_TBL">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="P_LINE_TBL_ITEM" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="BOOKED_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="CANCELLED_QUANTITY" type="xs:int"></xs:element>
+                                                    <xs:element name="CUST_PO_NUMBER"></xs:element>
+                                                    <xs:element name="FREIGHT_CARRIER_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="INVENTORY_ITEM_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="INVOICE_TO_ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="ORDERED_ITEM" type="xs:int"></xs:element>
+                                                    <xs:element name="ITEM_TYPE_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="LINE_CATEGORY_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="LINE_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LINE_NUMBER" type="xs:int"></xs:element>
+                                                    <xs:element name="LINE_TYPE_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="OPEN_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="ORDERED_QUANTITY" type="xs:int"></xs:element>
+                                                    <xs:element name="ORDER_QUANTITY_UOM" type="xs:string"></xs:element>
+                                                    <xs:element name="ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="ORIG_SYS_DOCUMENT_REF" type="xs:string"></xs:element>
+                                                    <xs:element name="ORIG_SYS_LINE_REF" type="xs:string"></xs:element>
+                                                    <xs:element name="PAYMENT_TERM_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="PRICE_LIST_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="PRICING_DATE" type="xs:string"></xs:element>
+                                                    <xs:element name="REQUEST_DATE" type="xs:string"></xs:element>
+                                                    <xs:element name="RESERVED_QUANTITY">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="SALESREP_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="SCHEDULE_ARRIVAL_DATE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="SCHEDULE_SHIP_DATE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="SHIPMENT_NUMBER">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="SHIPMENT_PRIORITY_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="SHIPPING_INTERFACED_FLAG" type="xs:string"></xs:element>
+                                                    <xs:element name="SHIPPING_METHOD_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="SHIP_FROM_ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="SHIP_TO_ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="SOLD_TO_ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="SOLD_FROM_ORG_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="SOURCE_TYPE_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="TAX_CODE" type="xs:string"></xs:element>
+                                                    <xs:element name="TAX_DATE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="TAX_EXEMPT_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="TAX_VALUE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="UNIT_LIST_PRICE" type="xs:int"></xs:element>
+                                                    <xs:element name="UNIT_LIST_PRICE_PER_PQTY" type="xs:int"></xs:element>
+                                                    <xs:element name="UNIT_SELLING_PRICE" type="xs:int"></xs:element>
+                                                    <xs:element name="UNIT_SELLING_PRICE_PER_PQTY" type="xs:int"></xs:element>
+                                                    <xs:element name="OPERATION" type="xs:string"></xs:element>
+                                                    <xs:element name="FIRST_ACK_CODE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="FIRST_ACK_DATE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LAST_ACK_CODE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LAST_ACK_DATE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="ORDER_SOURCE_ID" type="xs:int"></xs:element>
+                                                    <xs:element name="STATUS_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="ITEM_IDENTIFIER_TYPE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="CALCULATE_PRICE_FLAG" type="xs:string"></xs:element>
+                                                    <xs:element name="FLOW_STATUS_CODE">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="P_OLD_LINE_TBL"></xs:element>
+                            <xs:element name="P_LINE_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_VAL_TBL"></xs:element>
+                            <xs:element name="P_LINE_ADJ_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_ADJ_TBL"></xs:element>
+                            <xs:element name="P_LINE_ADJ_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_ADJ_VAL_TBL"></xs:element>
+                            <xs:element name="P_LINE_PRICE_ATT_TBL">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="P_LINE_PRICE_ATT_TBL_ITEM" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ORDER_PRICE_ATTRIB_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="HEADER_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LINE_ID">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LINE_INDEX" type="xs:int"></xs:element>
+                                                    <xs:element name="FLEX_TITLE" type="xs:string"></xs:element>
+                                                    <xs:element name="PRICING_CONTEXT" type="xs:string"></xs:element>
+                                                    <xs:element name="PRICING_ATTRIBUTE1" type="xs:int"></xs:element>
+                                                    <xs:element name="OVERRIDE_FLAG" type="xs:string"></xs:element>
+                                                    <xs:element name="RETURN_STATUS">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="DB_FLAG">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="OPERATION" type="xs:string"></xs:element>
+                                                    <xs:element name="LOCK_CONTROL">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                                                            <xs:attribute name="xsi:nil" type="xs:string"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="P_OLD_LINE_PRICE_ATT_TBL"></xs:element>
+                            <xs:element name="P_LINE_ADJ_ATT_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_ADJ_ATT_TBL"></xs:element>
+                            <xs:element name="P_LINE_ADJ_ASSOC_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_ADJ_ASSOC_TBL"></xs:element>
+                            <xs:element name="P_LINE_SCREDIT_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_SCREDIT_TBL"></xs:element>
+                            <xs:element name="P_LINE_SCREDIT_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_SCREDIT_VAL_TBL"></xs:element>
+                            <xs:element name="P_LINE_PAYMENT_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_PAYMENT_TBL"></xs:element>
+                            <xs:element name="P_LINE_PAYMENT_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LINE_PAYMENT_VAL_TBL"></xs:element>
+                            <xs:element name="P_LOT_SERIAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LOT_SERIAL_TBL"></xs:element>
+                            <xs:element name="P_LOT_SERIAL_VAL_TBL"></xs:element>
+                            <xs:element name="P_OLD_LOT_SERIAL_VAL_TBL"></xs:element>
+                            <xs:element name="P_ACTION_REQUEST_TBL"></xs:element>
+                            <xs:element name="P_RTRIM_DATA"></xs:element>
+                            <xs:element name="P_VALIDATE_DESC_FLEX"></xs:element>
+                            <xs:element name="P_HEADER_CUSTOMER_INFO_TBL"></xs:element>
+                            <xs:element name="P_LINE_CUSTOMER_INFO_TBL"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
